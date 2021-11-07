@@ -669,7 +669,7 @@ public class ErfanGSIs extends Command {
                         + "<a href=\"https://github.com/phhusson\">Husson</a>" + " | "
                         + "<a href=\"https://github.com/PriiiiyoGSIs/Bot3\">Bo³+t</a>" + "\n\n"
                         + "<b>PriiiiyoGSI</b>" + "\n"
-                        + "<a href=\"https://t.me/Priiiiyo\">Channel</a> | <a href=\"https://t.me/PriiiiyoGSI\">Chat</a> | <a href=\"https://github.com/PriiiiyoGSIs\">GitHub</a>"
+                        + "<a href=\"https://t.me/PriiiiyoGSI\">Channel</a> | <a href=\"https://t.me/PriiiiyoGSIs\">Chat</a> | <a href=\"https://github.com/PriiiiyoGSIs\">GitHub</a>"
                 );
                 sendMessage.setChatId(Objects.requireNonNull(SourceForgeSetup.getSfConf("bot-announcement-id")));
                 idGSI = bot.sendMessageAsyncBase(sendMessage, update);

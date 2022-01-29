@@ -221,7 +221,7 @@ public class ErfanGSIs extends Command {
                 paramComparableRaw = param.split(" ");
 
                 if (param.contains("-nv")) {
-                    noticeGSI = "<b>GSI Notice</b>\nThis GSI requires the vendor to have the same version of the system, check <a href=\"https://t.me/TrebleExperience_chat/10308\">this</a>.\n\n";
+                    noticeGSI = "<b>GSI Notice</b>\nThis GSI requires the vendor to have the same version of the system, check <a href=\"https://t.me/PriiiiyoGSIs/10308\">this</a>.\n\n";
                 } else {
                     noticeGSI = "<b>GSI Notice</b>\nNo information for this GSI was reported. Read the <b>Developer Notice</b> and check if there is any additional information directly from the builder.\n\n";
                 }

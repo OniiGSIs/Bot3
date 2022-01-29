@@ -38,13 +38,13 @@ public class About extends Command {
         List<InlineKeyboardButton> rowInline = new ArrayList<>();
         InlineKeyboardButton RIL = new InlineKeyboardButton();
         RIL.setText(prefs.getString("about_source_code"));
-        RIL.setUrl("https://github.com/TrebleExperience/Bot3");
+        RIL.setUrl("https://github.com/PriiiiyoGSIs/Bot3");
         rowInline.add(RIL);
 
         List<InlineKeyboardButton> rowInline2 = new ArrayList<>();
         InlineKeyboardButton RIL2 = new InlineKeyboardButton();
         RIL2.setText(prefs.getString("about_treble_channel"));
-        RIL2.setUrl("https://t.me/trebleexperience");
+        RIL2.setUrl("https://t.me/PriiiiyoGSI");
         rowInline2.add(RIL2);
 
         rowsInline.add(rowInline);

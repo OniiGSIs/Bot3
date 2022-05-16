@@ -42,17 +42,17 @@ public class Start extends Command {
         List<InlineKeyboardButton> ListInlineKeyboardButtonSourceCode = new ArrayList<>();
         InlineKeyboardButton ListInlineKeyboardButton = new InlineKeyboardButton();
         ListInlineKeyboardButton.setText(prefs.getString("start_source_code"));
-        ListInlineKeyboardButton.setUrl("https://github.com/PriiiiyoGSIs/Bot3");
+        ListInlineKeyboardButton.setUrl("https://github.com/ZualoliconVN/Bot3");
         ListInlineKeyboardButtonSourceCode.add(ListInlineKeyboardButton);
         rowsInline.add(ListInlineKeyboardButtonSourceCode);
 
         /*
-         * Prepare InlineKeyboardButton: PriiiiyoGSI Channel
+         * Prepare InlineKeyboardButton: Onii Channel
          */
         List<InlineKeyboardButton> ListInlineKeyboardButtonChannel = new ArrayList<>();
         InlineKeyboardButton ListInlineKeyboardButtonChannelBTN = new InlineKeyboardButton();
         ListInlineKeyboardButtonChannelBTN.setText(prefs.getString("start_treble_experience"));
-        ListInlineKeyboardButtonChannelBTN.setUrl("https://t.me/PriiiiyoGSI");
+        ListInlineKeyboardButtonChannelBTN.setUrl("https://t.me/OniiGSIVN");
         ListInlineKeyboardButtonChannel.add(ListInlineKeyboardButtonChannelBTN);
         rowsInline.add(ListInlineKeyboardButtonChannel);
 

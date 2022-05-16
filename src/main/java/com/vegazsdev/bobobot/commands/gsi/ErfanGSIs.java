@@ -85,7 +85,7 @@ public class ErfanGSIs extends Command {
     private PrefObj prefObj;
 
     public ErfanGSIs() {
-        super("url2gsi");
+        super("onii2gsi");
     }
 
     private static String[] listFilesForFolder(final File folder) {
@@ -465,7 +465,7 @@ public class ErfanGSIs extends Command {
         pb = new ProcessBuilder("/bin/bash", "-c",
                 "cd " + toolPath + " ; ./url2GSI.sh '" + gsiCmdObj.getUrl() + "' " + gsiCmdObj.getGsi() + " " + gsiCmdObj.getParam()
         );
-        fullLogs.append("<code>-> Starting process...</code>");
+        fullLogs.append("<code>➡️ Starting...</code>");
 
         /*
          * Send the message, it's GSI time!
@@ -520,7 +520,7 @@ public class ErfanGSIs extends Command {
                  * Gzip the files
                  */
                 for (String gzipFile : gzipFiles) {
-                    fullLogs.append("\n").append("<code>-> Gzipping: ").append(gzipFile).append(".gz").append("</code>");
+                    fullLogs.append("\n").append("<code> Gzipping: ").append(gzipFile).append(".gz").append("</code>");
                     bot.editMessage(fullLogs.toString(), update, id);
                     new FileTools().gzipFile(gzipFile, gzipFile + ".gz");
                 }
@@ -568,7 +568,7 @@ public class ErfanGSIs extends Command {
                 /*
                  * Now say the bot will upload files to SourceForge
                  */
-                fullLogs.append("\n").append("<code>-> Uploading compressed files from GSI to SourceForge...</code>");
+                fullLogs.append("\n").append("<code>-> Uploading to SourceForge...</code>");
                 bot.editMessage(fullLogs.toString(), update, id);
 
                 /*
@@ -604,7 +604,7 @@ public class ErfanGSIs extends Command {
                 if (!aonly.toString().trim().equals("")) {
                     List<InlineKeyboardButton> rowInline2 = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
-                    inlineKeyboardButton.setText("Aonly Download");
+                    inlineKeyboardButton.setText("📥 Aonly Download 📥");
                     inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + aonly);
                     rowInline2.add(inlineKeyboardButton);
                     rowsInline.add(rowInline2);
@@ -613,7 +613,7 @@ public class ErfanGSIs extends Command {
                 if (!ab.toString().trim().equals("")) {
                     List<InlineKeyboardButton> rowInline = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
-                    inlineKeyboardButton.setText("A/B Download");
+                    inlineKeyboardButton.setText("📥 A/B Download 📥");
                     inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + ab);
                     rowInline.add(inlineKeyboardButton);
                     rowsInline.add(rowInline);
@@ -622,7 +622,7 @@ public class ErfanGSIs extends Command {
                 if (!vendorOverlays.toString().trim().equals("")) {
                     List<InlineKeyboardButton> rowInline = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
-                    inlineKeyboardButton.setText("Vendor Overlays Download");
+                    inlineKeyboardButton.setText("📥 Vendor Overlays Download 📥");
                     inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + vendorOverlays);
                     rowInline.add(inlineKeyboardButton);
                     rowsInline.add(rowInline);
@@ -631,7 +631,7 @@ public class ErfanGSIs extends Command {
                 if (!odmOverlays.toString().trim().equals("")) {
                     List<InlineKeyboardButton> rowInline = new ArrayList<>();
                     InlineKeyboardButton inlineKeyboardButton = new InlineKeyboardButton();
-                    inlineKeyboardButton.setText("ODM Overlays Download");
+                    inlineKeyboardButton.setText("📥 ODM Overlays Download 📥");
                     inlineKeyboardButton.setUrl("https://sourceforge.net/projects/" + SourceForgeSetup.getSfConf("bot-sf-proj") + "/files/" + re + odmOverlays);
                     rowInline.add(inlineKeyboardButton);
                     rowsInline.add(rowInline);
@@ -656,25 +656,25 @@ public class ErfanGSIs extends Command {
                 /*
                  * Send GSI message
                  */
-                sendMessage.setText("<b>Requested " + gsiCmdObj.getGsi() + " | GSI + SGSI</b>"
-                        + "\n<b>From</b> " + getModelOfOutput(toolPath + "output")
-                        + "\n<b>Built by</b> <a href=\"" + "tg://user?id=" + builderID + "\">" + builder + "</a>"
-                        + "\n\n<b>Information</b>\n<code>" + descGSI
+                sendMessage.setText("<b>🔔 Ported " + gsiCmdObj.getGsi() + " | GSI</b>"
+                        + "\n<b>📱From</b> " + getModelOfOutput(toolPath + "output")
+                        + "\n<b>👤Built by ♥️</b> <a href=\"" + "tg://user?id=" + builderID + "\">" + builder + "</a>"
+                        + "\n\n<b>📝Information</b>\n<code>" + descGSI
                         + "</code>\n\n"
                         + noticeGSI
                         + developerNoticeGSI
-                        + "<b>Credits</b>" + "\n"
+                        + "<b>All Credits</b>" + "\n"
                         + "<a href=\"https://github.com/Erfanoabdi\">Erfan Abdi</a>" + " | "
                         + "<a href=\"https://github.com/xiaoxindada\">Xiaoxindada</a>" + " | "
                         + "<a href=\"https://github.com/phhusson\">Husson</a>" + " | "
-                        + "<a href=\"https://github.com/PriiiiyoGSIs/Bot3\">Bo³+t</a>" + "\n\n"
-                        + "<b>PriiiiyoGSI</b>" + "\n"
-                        + "<a href=\"https://t.me/PriiiiyoGSI\">Channel</a> | <a href=\"https://t.me/PriiiiyoGSIs\">Chat</a> | <a href=\"https://github.com/PriiiiyoGSIs\">GitHub</a>"
+                        + "<a href=\"https://github.com/ZualoliconVN/Bot3\">Bo³+t</a>" + "\n\n"
+                        + "<b>---ZualoliconVN GSIs---</b>" + "\n"
+                        + "<a href=\"https://t.me/OniiGSIVN\">Channel</a> | <a href=\"https://t.me/GSI_OniiChat\">Chat</a> | <a href=\"https://t.me/ZuaLolicon\">Owner</a>"
                 );
                 sendMessage.setChatId(Objects.requireNonNull(SourceForgeSetup.getSfConf("bot-announcement-id")));
                 idGSI = bot.sendMessageAsyncBase(sendMessage, update);
 
-                fullLogs.append("\n").append("-> Finished!");
+                fullLogs.append("\n").append("✅ Finished!");
                 bot.editMessage(fullLogs.toString(), update, id);
 
                 /*

@@ -777,7 +777,8 @@ public class ErfanGSIs extends Command {
      */
     public void sendSupportedROMs(Update update, TelegramBot bot, PrefObj prefs) {
         File[] supportedGSIsPandQ = ArrayUtils.addAll(supportedGSIs10);
-        File[] supportedGSIsRandS = ArrayUtils.addAll(supportedGSIs11, supportedGSIs12, supportedGSIs13);
+        File[] supportedGSIsRandS = ArrayUtils.addAll(supportedGSIs11, supportedGSIs12);
+        File[] supportedGSIsPandT = ArrayUtils.addAll(supportedGSIs13);
 
         if (supportedGSIsPandQ != null && supportedGSIsRandS != null) {
             bot.sendReply(prefs.getString("egsi_supported_types")

@@ -70,7 +70,6 @@ public class ErfanGSIs extends Command {
     private final File[] supportedGSIs10 = new File(toolPath + "roms/10").listFiles(File::isDirectory);
     private final File[] supportedGSIs11 = new File(toolPath + "roms/11").listFiles(File::isDirectory);
     private final File[] supportedGSIs12 = new File(toolPath + "roms/12").listFiles(File::isDirectory);
-    private final File[] supportedGSIs13 = new File(toolPath + "roms/13").listFiles(File::isDirectory);
 
     /**
      * Some workarounds.
@@ -183,7 +182,7 @@ public class ErfanGSIs extends Command {
                 }
             }
         } else {
-            bot.sendReply(prefs.getString("ghey_usage"), update);
+            bot.sendReply(prefs.getString("bad_usage"), update);
         }
     }
 
@@ -778,7 +777,6 @@ public class ErfanGSIs extends Command {
     public void sendSupportedROMs(Update update, TelegramBot bot, PrefObj prefs) {
         File[] supportedGSIsPandQ = ArrayUtils.addAll(supportedGSIs10);
         File[] supportedGSIsRandS = ArrayUtils.addAll(supportedGSIs11, supportedGSIs12);
-        File[] supportedGSIsPandT = ArrayUtils.addAll(supportedGSIs13);
 
         if (supportedGSIsPandQ != null && supportedGSIsRandS != null) {
             bot.sendReply(prefs.getString("egsi_supported_types")
@@ -792,10 +790,6 @@ public class ErfanGSIs extends Command {
                                     .replace("]", ""))
                     .replace("%3",
                             Arrays.toString(supportedGSIs12).replace(toolPath + "roms/12/", "")
-                                    .replace("[", "")
-                                    .replace("]", "")), update);
-                    .replace("%4",
-                            Arrays.toString(supportedGSIs13).replace(toolPath + "roms/13/", "")
                                     .replace("[", "")
                                     .replace("]", "")), update);
         } else {

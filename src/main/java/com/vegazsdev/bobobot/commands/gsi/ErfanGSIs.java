@@ -70,6 +70,7 @@ public class ErfanGSIs extends Command {
     private final File[] supportedGSIs10 = new File(toolPath + "roms/10").listFiles(File::isDirectory);
     private final File[] supportedGSIs11 = new File(toolPath + "roms/11").listFiles(File::isDirectory);
     private final File[] supportedGSIs12 = new File(toolPath + "roms/12").listFiles(File::isDirectory);
+    private final File[] supportedGSIs13 = new File(toolPath + "roms/13").listFiles(File::isDirectory);
 
     /**
      * Some workarounds.
@@ -182,7 +183,7 @@ public class ErfanGSIs extends Command {
                 }
             }
         } else {
-            bot.sendReply(prefs.getString("bad_usage"), update);
+            bot.sendReply(prefs.getString("ghey_usage"), update);
         }
     }
 
